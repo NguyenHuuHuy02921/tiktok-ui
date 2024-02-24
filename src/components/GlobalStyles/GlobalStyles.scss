@@ -4,9 +4,15 @@
 
 :root {
     --primary-color: #EF2950;
+    
+    // Default layout
+    --default-layout-header-heigh: 60px;
+    --default-layout-header-width: 1240px;
 }
 
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 html{
