@@ -3,8 +3,11 @@
 
 
 :root {
-    --primary-color: #EF2950;
-    
+    --primary-color: rgba(254, 44, 85, 1);
+    --black-color: rgb(22, 24, 35);
+    --white-color: #fff;
+    --text-color: #333;
+
     // Default layout
     --default-layout-header-heigh: 60px;
     --default-layout-header-width: 1240px;
@@ -22,4 +25,17 @@ html{
 body{
     font-family: 'IBM Plex Sans', 'san-serif';
     font-size: 1.6rem;
+    line-height: 1.5rem;
+    text-rendering: optimizeSpeed;
+    color: var(--text-color);
+}
+
+button, input, [tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
 }
