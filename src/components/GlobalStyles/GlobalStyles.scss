@@ -6,11 +6,12 @@
     --primary-color: rgba(254, 44, 85, 1);
     --black-color: rgb(22, 24, 35);
     --white-color: #fff;
-    --text-color: #333;
+    --text-color: #161823;
 
     // Default layout
     --default-layout-header-heigh: 60px;
-    --default-layout-header-width: 1240px;
+    --default-layout-header-width: 1488px;
+    --default-layout-header-horizontal-spacer: 24px;
 }
 
 *{
@@ -39,3 +40,25 @@ a[href] {
     color: var(--text-color);
     text-decoration: none;
 }
+
+// Custom tippy
+ body 
+    .tippy-box {
+    border-radius: 8px;
+    font-size: 600;
+    font-weight: 1.6rem;
+    line-height: 22px;
+    background-color: rgba(84, 84, 84, 0.92);
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);;
+    }
+
+    .tippy-content {
+        padding: 8px 9px;
+    }
+
+    .tippy-box[data-placement ^=bottom] > .tippy-arrow::before{
+        top: -8px;
+    }
+ }
