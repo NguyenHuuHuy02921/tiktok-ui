@@ -12,11 +12,14 @@
 }
 
 .menu-popper {
-    padding: 8px 0;
+    padding: 8px 0px;
+
 }
 // Menu item
 .menu-item {
-
+    display: flex;
+    align-items: center;
+    margin-bottom: -2px;
     &.separate {
         border-top: 1px solid rgba(22, 24, 35, 0.12);
     }

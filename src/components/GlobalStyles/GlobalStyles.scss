@@ -1,5 +1,4 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
 
 
 :root {
@@ -18,13 +17,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
 }
 html{
     font-size: 62.5%;
 }
 
 body{
-    font-family: 'IBM Plex Sans', 'san-serif';
     font-size: 1.6rem;
     line-height: 1.5rem;
     text-rendering: optimizeSpeed;
@@ -40,6 +39,39 @@ a[href] {
     color: var(--text-color);
     text-decoration: none;
 }
+
+// Fonts embeded
+@font-face {
+    font-family: TikTokFont;
+    src: url('/assets/fonts/TikTokDisplayFont-Semibold.woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: TikTokFont;
+    src: url('/assets/fonts/TikTokFont-Bold.woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: TikTokFont;
+    src: url('/assets/fonts/TikTokFont-Regular.woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: TikTokFont;
+    src: url('/assets/fonts/TikTokFont-Semibold.woff2');
+    font-weight: 600;
+}
+
+// @font-face {
+//     font-family: TikTokFont;
+//     src: url('/assets/fonts/TikTokDisplayFont-Semibold.woff2');
+//     font-weight: 600;
+// }
+
+
 
 // Custom tippy
  body 

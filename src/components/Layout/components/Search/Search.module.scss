@@ -1,32 +1,5 @@
-.wrapper{
-    --search-heigh: 46px;
-    --search-border-radius: 92px;
-    --search-top-spacer: 9px;
-    --search-button-width: 52px;
-
-
-    width: 100%;
-    height: var(--default-layout-header-heigh, 60px);
-    box-shadow: 0 1px 1px rgb(0 0 0 / 12%);
-    display: flex;
-    justify-content: center;
-}
-
-.inner {
-    
-    height: 100%;
-    padding: 0 var(--default-layout-header-horizontal-spacer);
-    width: var(--default-layout-header-width);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-
-} 
-
-.search, .search-result {
+.search,
+.search-result {
     width: 500px;
 }
 
@@ -52,7 +25,7 @@
         appearance: textfield;
     }
 
-    input:not(:placeholder-shown) ~ .search-btn {
+    input:not(:placeholder-shown)~.search-btn {
         color: rgba(22, 24, 35, 0.75);
     }
 
@@ -69,24 +42,40 @@
     &:focus-within {
         border: 1.5px solid rgba(22, 24, 35, 0.2);
     }
-} 
+}
 
 .search-title {
     padding: 5px 12px;
     font-size: 1.4rem;
-    color:rgba(22, 24, 35, 0.3);
+    color: rgba(22, 24, 35, 0.3);
     font-weight: 600;
 
 }
 
-.clear, .loading {
+.clear,
+.loading {
     position: absolute;
     right: calc(var(--search-button-width) + 16px);
     top: 50%;
     transform: translateY(-50%);
     color: rgba(22, 24, 35, 0.34);
-    
-} 
+
+}
+
+.loading {
+    animation: spinner 1s linear infinite ;
+}
+
+@keyframes spinner {
+    from {
+        transform: translateY(-50%) rotate(0);
+    }
+
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
 .search-btn {
     width: 52px;
     height: 100%;
@@ -94,48 +83,13 @@
     border-bottom-right-radius: var(--search-border-radius);
     font-size: 2.4rem;
     color: rgba(22, 24, 35, 0.34);
+
     &:hover {
         background-color: rgba(22, 24, 35, 0.06);
         cursor: pointer;
     }
 
     &:active {
-        background-color:rgba(22, 24, 35, 0.2);
+        background-color: rgba(22, 24, 35, 0.2);
     }
-} 
-
-// Actions
-.actions {
-    display: flex;
-    align-items: center;
-
-    
-}
-
-.more-btn {
-    background-color: var(--white-color);
-    font-size: 20px;
-    cursor: pointer;
-    font-style: normal;
-    padding: 4px 8px;
-    margin-left: 16px;
-}
-
-.action-btn {
-    color: #161821;
-    background-color: transparent;
-    font-size: 2.2rem;
-    padding: 4px 12px;
-    cursor: pointer;
-}
-
-
-.user-avatar {
-    width: 32px;
-    height: 32px;
-    object-fit: cover;
-    border: 50%;
-    border-radius: 50%;
-    margin-left: 12px;
-    cursor: pointer;
 }
