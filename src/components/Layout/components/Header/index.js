@@ -2,15 +2,15 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faEllipsisVertical,} from '@fortawesome/free-solid-svg-icons';
-
+import { Link } from 'react-router-dom';
 
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css'; // optional
 
+import routesConfig  from '@/config/routes';
 import Button from '@/components/Button';
 import styles from './Header.module.scss';
 import images from '@/assets/images';
-
 import Menu from '@/components/Popper/Menu';
 import {
     UploadIcon, InboxIcon, MessageIcon, ProfileIcon, CoinIcon, SettingsIcon,
@@ -25,7 +25,7 @@ const cx = classNames.bind(styles)
 const MENU_ITEMS = [
     {
         icon: <LanguageIcon />,
-        title: 'English',
+        title: 'Language',
         children: {
             title: 'Language',
             data: [
@@ -55,10 +55,6 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-    
-    
-    
-    
     // Handle logic
     const handleMenuChange = (menuItem) => {
         console.log(menuItem);
@@ -94,7 +90,9 @@ function Header() {
     return <header className={cx('wrapper')}>
         <div className={cx('inner')}>
             <div className={cx('logo')}>
-                <img src={images.logo} alt='Tiktok' />
+                <Link to={routesConfig.Home} className={cx('logo-link')}>
+                    <img src={images.logo} alt='Tiktok' />
+                </Link>
             </div>
             {/* search */}
             <Search />

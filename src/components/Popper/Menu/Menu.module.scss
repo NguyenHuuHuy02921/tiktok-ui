@@ -12,8 +12,12 @@
 }
 
 .menu-popper {
-    padding: 8px 0px;
+    padding: 8px;
 
+}
+
+.menu-body {
+    overflow-y: overlay;
 }
 // Menu item
 .menu-item {
@@ -33,6 +37,7 @@
 // Header
 .header {
     position: relative;
+    flex-shrink: 0;
     height: 50px;
     margin-top: -8px;
 }
